@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <malloc.h>
-#include "src_reader.h"
+#include "io.h"
 
+/**
+* This function returns a struct containing the file's (fp)
+* number of lines, and the length of the longest line
+*/
 f_i get_file_info(FILE *fp, f_i * fi){
     char c;
     int char_count = 0;
@@ -13,6 +17,7 @@ f_i get_file_info(FILE *fp, f_i * fi){
         if(c == '\n'){
             ++lines;
             ++char_count; //always accounting for the new line character
+            ++char_count; //and accounting for the longest line ending char
             if(char_count > max){
                 max = char_count;
             }

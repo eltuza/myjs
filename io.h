@@ -1,5 +1,5 @@
-#ifndef SRC_READER
-#define SRC_READER
+#ifndef IO
+#define IO
     struct FILE_INFO{
         int lines;
         int max_line_length;
